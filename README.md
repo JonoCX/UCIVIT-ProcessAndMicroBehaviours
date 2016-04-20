@@ -12,21 +12,29 @@ This set of scripts process low-level interaction data in a scalable way. Making
 
 ##Step 1 ##
 Prepares the data for analysis. Non-recurrent users are removed, temporal features relating episodes within same users are created, etc.
-After filling the *shellVariables.sh* and *MapreduceConstants* with the information of the database, the *ScratchStartv2.sh* script can be run, so all necessary scripts are run sequentially. Depending on the size of the database, this script can take a long time to run. In the case of analysis an entire year of interaction data, from thousands of users, it can take up to 3 days.
-The result of the processing is the augmentation of the events with temporal features, so the analysis in step 2 is possible.
+
+###How to run###
+1. Complete the *shellVariables.sh* and *MapreduceConstants* with the information of the database.
+2. The *ScratchStartv2.sh* script can be run, so all necessary scripts are run sequentially. Depending on the size of the database, this script can take a long time to run. In the case of analysis an entire year of interaction data, from thousands of users, it can take up to 3 days.
+3. The result of the processing is the augmentation of the events with temporal features, so the analysis in step 2 is possible.
 
 ##Step 2 ##
 Creates additional document collections with a given set of micro behaviours.
+TODO: define micro behaviour
+
+###How to run###
+1. Complete the *MapreduceConstants* with the information of the database.
+2. The *RunBehaviourAnalysis.sh* script can be run to extract the micro behaviours defined in each file.
+3. The result is an additional set of collections in the database, containing the extracted micro behaviours for each user and episode.
 
 ##Step 3 ##
 Extracts constructed micro behaviours and transforms the resulting JSON files into CSV documents to support a posterior analysis.
+TODO: how do we process this CSV data?
 
-
-
-### Who do I talk to? ###
-
-This tool is based in UsaProxy, developed by the group of Richard Atterer http://fnuked.de/usaproxy/
-
+###How to run###
+1. Complete the *shellVariables.sh* and *MapreduceConstants* with the information of the database.
+2. The *ExtractBehaviours.sh* script can be run to extract the micro behaviours defined in each file and transform the resulting data into CSV files.
+3. In order to make the script scalable, the data is first extracted in 4 JSON files for each micro behaviour into a folder called *data* (created during execution if it doesn't exist). These files are then transformed into CSV, and then combined into the *combinedCSV* folder.
 
 ###Contact###
 For questions, or help using this tool, contact Aitor Apaolaza (aitor.apaolaza@manchester.ac.uk)
