@@ -20,7 +20,8 @@ Prepares the data for analysis. Non-recurrent users are removed, temporal featur
 
 ##Step 2 ##
 Creates additional document collections with a given set of micro behaviours.
-TODO: define micro behaviour
+
+Micro behaviours are small comparable units of user interaction. These units support scalable analysis of low-level interaction without disregarding its fine-grained nature.
 
 ###How to run###
 1. Complete the *MapreduceConstants* with the information of the database.
@@ -29,12 +30,12 @@ TODO: define micro behaviour
 
 ##Step 3 ##
 Extracts constructed micro behaviours and transforms the resulting JSON files into CSV documents to support a posterior analysis.
-TODO: how do we process this CSV data?
+Resulting data has been used as input for the UCIVIT-LongitudinalVis project. In this project longitudinal analysis of interaction data is supported through the use of descriptive statistics and regression models, such as mixed linear models.
 
 ###How to run###
 1. Complete the *shellVariables.sh* and *MapreduceConstants* with the information of the database.
 2. The *ExtractBehaviours.sh* script can be run to extract the micro behaviours defined in each file and transform the resulting data into CSV files.
-3. In order to make the script scalable, the data is first extracted in 4 JSON files for each micro behaviour into a folder called *data* (created during execution if it doesn't exist). These files are then transformed into CSV, and then combined into the *combinedCSV* folder.
+3. In order to make the script scalable, the data is first extracted in 4 JSON files for each micro behaviour into a folder called *data* (created during execution if it doesn't exist). These files are then transformed into CSV and then combined into the *combinedCSV* folder.
 
 ###Contact###
 For questions, or help using this tool, contact Aitor Apaolaza (aitor.apaolaza@manchester.ac.uk)
