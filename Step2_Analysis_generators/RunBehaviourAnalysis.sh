@@ -4,7 +4,7 @@
 mongo localhost/testdb MouseBehaviourMongoSkinny.js
 
 
-#mongo localhost/testdb MouseMoveBehaviourMongo.js
+mongo localhost/testdb MouseMoveBehaviourMongo.js
 
-#mongo localhost/testdb ScrollBehaviourMongo.js
+mongo localhost/testdb ScrollBehaviourMongo.js
 

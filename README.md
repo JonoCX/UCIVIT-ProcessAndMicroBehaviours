@@ -46,46 +46,37 @@ This set of scripts process low-level interaction data in a scalable way. Making
 
 #### Step 1
 
-Once the configuration files have been set up, open a console in the *Step1_Preprocessing_scripts* folder
+Once the configuration files have been set up, open a console in the *Step1_Preprocessing_scripts* folder, and run the *ScratchStartv2.sh* script.
 
+```script
+sh ScratchStartv2.sh
+```
 
-## How do I get set up?
+This script prepares the data for analysis. Non-recurrent users are removed, temporal features relating episodes within same users are created, etc.
 
-1. This set of scripts relies on an existing MongoDB installation, and data captured using the UCIVIT-WebIntCap tool.
-1. Each folder corresponds to a different step of the analysis, so they need to be run in order
-1. Before running any of the steps, the files *shellVariables.sh* and *MapreduceConstants* need to be filled with the information concerning the database installation.
-1. The different steps provide different functionalities, which requires different ways of execution.
+All necessary scripts are run sequentially. Depending on the size of the database, this script can take a long time to run. In the case of analysis an entire year of interaction data, from thousands of users, it can take up to 3 days.
+The result of the processing is the augmentation of the events with temporal features, so the analysis in step 2 is possible.
 
-## Step 1
+#### Step 2
 
-Prepares the data for analysis. Non-recurrent users are removed, temporal features relating episodes within same users are created, etc.
+Creates additional document collections with a given set of micro behaviours. Micro behaviours are small comparable units of user interaction. These units support scalable analysis of low-level interaction without disregarding its fine-grained nature.
 
-### How to run
-
-1. Complete the *shellVariables.sh* and *MapreduceConstants* with the information of the database.
-1. The *ScratchStartv2.sh* script can be run, so all necessary scripts are run sequentially. Depending on the size of the database, this script can take a long time to run. In the case of analysis an entire year of interaction data, from thousands of users, it can take up to 3 days.
-1. The result of the processing is the augmentation of the events with temporal features, so the analysis in step 2 is possible.
-
-## Step 2
-
-Creates additional document collections with a given set of micro behaviours.
-
-Micro behaviours are small comparable units of user interaction. These units support scalable analysis of low-level interaction without disregarding its fine-grained nature.
-
-### How to run
-
-1. Complete the *MapreduceConstants* with the information of the database.
 1. The *RunBehaviourAnalysis.sh* script can be run to extract the micro behaviours defined in each file.
+
+    ```script
+    sh RunBehaviourAnalysis.sh
+    ```
+
 1. The result is an additional set of collections in the database, containing the extracted micro behaviours for each user and episode.
 
-## Step 3
+
+
+#### Step 3
 
 Extracts constructed micro behaviours and transforms the resulting JSON files into CSV documents to support a posterior analysis.
 Resulting data has been used as input for the UCIVIT-LongitudinalVis project. In this project longitudinal analysis of interaction data is supported through the use of descriptive statistics and regression models, such as mixed linear models.
 
-### How to run
 
-1. Complete the *shellVariables.sh* and *MapreduceConstants* with the information of the database.
 1. The *ExtractBehaviours.sh* script can be run to extract the micro behaviours defined in each file and transform the resulting data into CSV files.
 1. In order to make the script scalable, the data is first extracted in 4 JSON files for each micro behaviour into a folder called *data* (created during execution if it doesn't exist). These files are then transformed into CSV and then combined into the *combinedCSV* folder.
 
@@ -104,3 +95,10 @@ The design of this tool supported the following publications:
 ## Acknowledgements
 
 This work was supported by the Engineering and Physical Sciences Research Council [EP/I028099/1].
+
+
+## TODOs for section
+
+1. Add mock data
+1. Test that everything works
+1. I need to add examples of what collections are created in Step 2
