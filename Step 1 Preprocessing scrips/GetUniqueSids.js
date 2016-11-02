@@ -6,7 +6,7 @@
  */ 
 
 //////We need to load the constants file
-load("MapReduceConstants.js");
+load("../MapReduceConstants.js");
 
 var db = connect(mongoPath);
 db.auth(mongoUser,mongoPass);

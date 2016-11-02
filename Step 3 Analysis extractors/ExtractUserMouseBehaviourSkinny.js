@@ -14,7 +14,7 @@
 function printMouseStatistics(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -43,7 +43,7 @@ function printMouseStatistics(){
 function printMouseStatisticsBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -79,7 +79,7 @@ function printMouseStatisticsBatchedPerUser(startPercent,endPercent){
 function printMouseEpisodeDuration(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -115,7 +115,7 @@ function printMouseEpisodeDuration(){
 function printMouseEpisodeDurationBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -158,7 +158,7 @@ function printMouseEpisodeDurationBatchedPerUser(startPercent,endPercent){
 function printClickSpeed(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -194,7 +194,7 @@ function printClickSpeed(){
 function printClickSpeedBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -237,7 +237,7 @@ function printClickSpeedBatchedPerUser(startPercent,endPercent){
 function printMouseIdleTime(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -277,7 +277,7 @@ function printMouseIdleTime(){
 function printMouseIdleTimeBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -323,7 +323,7 @@ function printMouseIdleTimeBatchedPerUser(startPercent,endPercent){
 function printTimeToClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -358,7 +358,7 @@ function printTimeToClick(){
 function printTimeToClickBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -400,7 +400,7 @@ function printTimeToClickBatchedPerUser(startPercent,endPercent){
 function printHoveringOver(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -436,7 +436,7 @@ function printHoveringOver(){
 function printUnintentionalMousemovement(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -470,7 +470,7 @@ function printUnintentionalMousemovement(){
 function printUnintentionalMousemovementBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -512,7 +512,7 @@ function printUnintentionalMousemovementBatchedPerUser(startPercent,endPercent){
 function printFailToClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -547,7 +547,7 @@ function printFailToClick(){
 function printFailToClickBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -590,7 +590,7 @@ function printFailToClickBatchedPerUser(startPercent,endPercent){
 function printIdleAfterClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -625,7 +625,7 @@ function printIdleAfterClick(){
 function printIdleAfterClickBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -667,7 +667,7 @@ function printIdleAfterClickBatchedPerUser(startPercent,endPercent){
 function printLackOfMousePrecision(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -702,7 +702,7 @@ function printLackOfMousePrecision(){
 function printLackOfMousePrecisionBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -744,7 +744,7 @@ function printLackOfMousePrecisionBatchedPerUser(startPercent,endPercent){
 function printRepeatedClicks(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -780,7 +780,7 @@ function printRepeatedClicks(){
 function printRepeatedClicksBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -823,7 +823,7 @@ function printRepeatedClicksBatchedPerUser(startPercent,endPercent){
 function printFailToClickDiffNode(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -858,7 +858,7 @@ function printFailToClickDiffNode(){
 function printFailToClickDiffNodeBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -900,7 +900,7 @@ function printFailToClickDiffNodeBatchedPerUser(startPercent,endPercent){
 function printFailToClickIgnoreNode(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -935,7 +935,7 @@ function printFailToClickIgnoreNode(){
 function printFailToClickIgnoreNodeBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -977,7 +977,7 @@ function printFailToClickIgnoreNodeBatchedPerUser(startPercent,endPercent){
 function printClickAfterLoad(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -1013,7 +1013,7 @@ function printClickAfterLoad(){
 function printClickAfterLoadBatchedPerUser(startPercent,endPercent){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	/*OLD connection system
 	 * var db = connect(mongoPath);

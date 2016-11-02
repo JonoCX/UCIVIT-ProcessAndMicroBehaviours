@@ -4,7 +4,7 @@
 //Additionally, you can use the connect() method to connect to the MongoDB instance. The following example connects to the MongoDB instance that is running on localhost with the non-default port 27020 and set the global db variable:
 
 //////We need to load the constants file
-load("MapReduceConstants.js");
+load("../MapReduceConstants.js");
 
 db = connectAndValidate();
 

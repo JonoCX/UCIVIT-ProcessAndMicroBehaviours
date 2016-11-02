@@ -27,7 +27,7 @@
 function printScrollStatistics(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -60,7 +60,7 @@ function printScrollStatistics(){
 function printScrollStatisticsBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -100,7 +100,7 @@ function printScrollStatisticsBatchedPerUser(startPercent,endPercent){
 function printScrollEpisodeDuration(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -138,7 +138,7 @@ function printScrollEpisodeDuration(){
 function printScrollEpisodeDurationBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -183,7 +183,7 @@ function printScrollEpisodeDurationBatchedPerUser(startPercent,endPercent){
 function printControlledScrollSummary(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -208,7 +208,7 @@ function printControlledScrollSummary(){
 function printControlledScrollSummaryBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -240,7 +240,7 @@ function printControlledScrollSummaryBatchedPerUser(startPercent,endPercent){
 function printFastMouseScrollCycleSummary(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -266,7 +266,7 @@ function printFastMouseScrollCycleSummary(){
 function printFastMouseScrollCycleSummaryBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -298,7 +298,7 @@ function printFastMouseScrollCycleSummaryBatchedPerUser(startPercent,endPercent)
 function printFastSingleDirectionMouseScrollSummary(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -324,7 +324,7 @@ function printFastSingleDirectionMouseScrollSummary(){
 function printFastSingleDirectionMouseScrollSummaryBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -361,7 +361,7 @@ function printFastSingleDirectionMouseScrollSummaryBatchedPerUser(startPercent,e
 function printControlledScroll(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -387,7 +387,7 @@ function printControlledScroll(){
 function printControlledScrollBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -420,7 +420,7 @@ function printControlledScrollBatchedPerUser(startPercent,endPercent){
 function printFastMouseScrollCycle(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -447,7 +447,7 @@ function printFastMouseScrollCycle(){
 function printFastMouseScrollCycleBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -480,7 +480,7 @@ function printFastMouseScrollCycleBatchedPerUser(startPercent,endPercent){
 function printFastSingleDirectionMouseScroll(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -508,7 +508,7 @@ function printFastSingleDirectionMouseScroll(){
 function printFastSingleDirectionMouseScrollBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -544,7 +544,7 @@ function printFastSingleDirectionMouseScrollBatchedPerUser(startPercent,endPerce
 function printRegularScrollListBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);

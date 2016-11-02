@@ -14,7 +14,7 @@
 function printMouseMoveStatistics(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -43,7 +43,7 @@ function printMouseMoveStatistics(){
 function printMouseMoveStatisticsBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -79,7 +79,7 @@ function printMouseMoveStatisticsBatchedPerUser(startPercent,endPercent){
 function printMouseMoveEpisodeDuration(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -116,7 +116,7 @@ function printMouseMoveEpisodeDuration(){
 function printMouseMoveEpisodeDurationBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -159,7 +159,7 @@ function printMouseMoveEpisodeDurationBatchedPerUser(startPercent,endPercent){
 function printMouseMove(){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -190,7 +190,7 @@ function printMouseMove(){
 function printMouseMoveBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);
@@ -229,7 +229,7 @@ function printMouseMoveBatchedPerUser(startPercent,endPercent){
 function printMouseMoveTimeListBatchedPerUser(startPercent,endPercent){
 
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	/*OLD connection system
 	 * var db = connect(mongoPath);

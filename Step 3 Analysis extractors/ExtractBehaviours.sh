@@ -7,7 +7,7 @@ timestamp() {
   date +"%T"
 }
 
-. ./shellVariables.sh
+. ../shellVariables.sh
 
 echo today is $(timestamp)
 

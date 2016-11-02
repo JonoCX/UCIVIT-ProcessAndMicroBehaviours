@@ -14,7 +14,7 @@
 function printMouseStatistics(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -42,7 +42,7 @@ function printMouseStatistics(){
 function printMouseEpisodeDuration(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -75,7 +75,7 @@ function printMouseEpisodeDuration(){
 function printClickSpeed(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -106,7 +106,7 @@ function printClickSpeed(){
 function printMouseIdleTime(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -137,7 +137,7 @@ function printMouseIdleTime(){
 function printTimeToClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -168,7 +168,7 @@ function printTimeToClick(){
 function printHoveringOver(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -199,7 +199,7 @@ function printHoveringOver(){
 function printUnintentionalMousemovement(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -230,7 +230,7 @@ function printUnintentionalMousemovement(){
 function printFailToClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -262,7 +262,7 @@ function printFailToClick(){
 function printIdleAfterClick(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -293,7 +293,7 @@ function printIdleAfterClick(){
 function printLackOfMousePrecision(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -324,7 +324,7 @@ function printLackOfMousePrecision(){
 function printRepeatedClicks(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -356,7 +356,7 @@ function printRepeatedClicks(){
 function printFailToClickDiffNode(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);
@@ -387,7 +387,7 @@ function printFailToClickDiffNode(){
 function printFailToClickIgnoreNode(){
 	
 	//////We need to load the constants file
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 	
 	var db = connect(mongoPath);
 	db.auth(mongoUser,mongoPass);

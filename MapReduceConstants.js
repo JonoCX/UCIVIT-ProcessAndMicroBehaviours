@@ -4,24 +4,26 @@
 
 
 ///MongoDB connection info
-//var mongoPath = "localhost/testdb";//130.88.193.33/testdb"
-var mongoPath = "SERVERIP/DATABASENAME"//"localhost/alltestingdb";
+var mongoPath = "localhost/ucivitdb"//SERVERIP/DATABASENAME
 var mongoAuthenticateDB = "admin"//DO NOT CHANGE
-var mongoQueryDB = "DATABASENAME"//"alltestingdb"//"alltrainingdb"
+var mongoQueryDB = "ucivitdb"
 var mongoUser = "DBUSERNAME";
 var mongoPass = "DBPASSWORD";
 
 //web site to be analysed, determined by its "sd" value. 10002 is kupb, 10006 is CS
-var websiteId = "10002";
+var websiteId = "WEBSITEID";
 
 
 /** Connects to the database, authenticates the connection against the correspondent 
  * */
 function connectAndValidate() {
 	connect(mongoPath);
-	db = db.getSiblingDB(mongoAuthenticateDB);
-	db.auth(mongoUser,mongoPass);
-	db = db.getSiblingDB(mongoQueryDB);
+
+	if (mongoUser !== "" || mongoUser !== "DBUSERNAME"){
+		db = db.getSiblingDB(mongoAuthenticateDB);
+		db.auth(mongoUser,mongoPass);
+		db = db.getSiblingDB(mongoQueryDB);
+	}
 	return db;
 }
 

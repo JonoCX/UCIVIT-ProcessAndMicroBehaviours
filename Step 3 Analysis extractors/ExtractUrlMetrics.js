@@ -8,7 +8,7 @@
 
 function printUrlMetrics(){
 	
-	load("MapReduceConstants.js");
+	load("../MapReduceConstants.js");
 
 	var db = connectAndValidate();
 

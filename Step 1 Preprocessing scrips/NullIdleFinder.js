@@ -13,17 +13,13 @@
  */
   
 //////We need to load the constants file
-load("MapReduceConstants.js");
+load("../MapReduceConstants.js");
 
 var db = connect(mongoPath);
 db.auth(mongoUser,mongoPass);
 
 
 print("Running NullIdleFinder function at:" + datestamp());
-
-//////We need to load the constants file
-load("MapReduceConstants.js");
-
 
 
 var consoleIndent = "   ";

@@ -21,7 +21,7 @@
 var consoleIndent = "   ";
 
 //////We need to load the constants file
-load("MapReduceConstants.js");
+load("../MapReduceConstants.js");
 
 /*OLD connection system
  * var db = connect(mongoPath);
