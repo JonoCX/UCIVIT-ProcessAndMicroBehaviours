@@ -9,7 +9,7 @@ This set of scripts process low-level interaction data in a scalable way. Making
 1. Import it into your MongoDB installation, running the following command from the same folder.
 
 ```script
-mongorestore /mongodump-2013-06-26/
+mongorestore /mongodump_testdata/
 ```
 
 1. 
