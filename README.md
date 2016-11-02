@@ -5,14 +5,49 @@ This set of scripts process low-level interaction data in a scalable way. Making
 
 ## Test run
 
+### Importing test data
+
 1. Download supplied anonymised data and uncompress it.
 1. Import it into your MongoDB installation, running the following command from the same folder.
 
-```script
-mongorestore /mongodump_testdata/
-```
+    ```script
+    mongorestore /mongodump_testdata/
+    ```
 
-1. 
+### Configuring scripts
+
+1. The *MapreduceConstants.js* contains the information to access the database. The default configuration accesses to the *ucivitdb* database in the local installation of MongoDB. The *websiteid* needs to be changed, as it indicates which Web site's information will be analysed. If the username is not changed, the scripts will try to access the database using no credentials.
+
+    **OPTIONAL**: if an administrator account has been configured, the default username and password can be overwritten. If the username has been changed, the scripts will use the provided user (*mongoUser*) and password (*mongoPass*) to gain access to the configured authentication database (*mongoAuthenticateDB*). All queries will be run against the *mongoQueryDB* database.
+
+    ```script
+    var mongoPath = "localhost/ucivitdb"//SERVERIP/DATABASENAME
+    var mongoAuthenticateDB = "admin"//DO NOT CHANGE
+    var mongoQueryDB = "ucivitdb"
+    var mongoUser = "DBUSERNAME";
+    var mongoPass = "DBPASSWORD";
+    var websiteId = "WEBSITEID";
+    ```
+
+1. The *shellVariables.sh* script contains the same information as *MapreduceConstants.js*. The *websiteId* variable needs to be set to the same one as in *MapreduceConstants.js*.
+
+    **OPTIONAL**: the use of an administrator access requires the same configuration as for *MapreduceConstants.js*.
+
+    ```script
+    mongoPath="localhost/ucivitdb"
+    mongoUser="USERNAME"
+    mongoPass="PASSWORD"
+    mongoAuthenticateDB="admin"
+    mongoDB="ucivitdb"
+    websiteId="WEBSITEID";
+    ```
+
+### Running scripts
+
+#### Step 1
+
+Once the configuration files have been set up, open a console in the *Step1_Preprocessing_scripts* folder
+
 
 ## How do I get set up?
 

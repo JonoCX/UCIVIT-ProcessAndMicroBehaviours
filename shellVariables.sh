@@ -3,7 +3,6 @@ echo "Loading shell variables" at $(timestamp)
 ##Defining variables
 #SERVERIP/DATABASENAME
 mongoPath="localhost/ucivitdb"
-#"localhost/alltestingdb"#"localhost/kupballtrainingdb"
 mongoUser="USERNAME"
 mongoPass="PASSWORD"
 mongoAuthenticateDB="admin"
