@@ -32,6 +32,7 @@ echo "   "
 
 
 echo "Initialising indexes" at $(timestamp)
+echo "Depending on the size of the database this step can take a while"
 mongo InitialiseIndexes.js
 
 ##So both authentication and no authentication are supported, a username check is done
@@ -45,8 +46,8 @@ else
 fi;
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
+  echo $mongoPath --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
+  mongo $mongoPath --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"  
@@ -55,8 +56,8 @@ fi;
 
 ###Remove data not corresponding to our desired db?
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
+  echo $mongoPath --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
+  mongo $mongoPath --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'sd':{\$ne:'$websiteId'}});"  
@@ -67,16 +68,16 @@ fi;
 echo "Check for null timestamps" at $(timestamp)
 echo "The following number of events were found without timestamp and will be deleted" at $(timestamp)
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
+  echo $mongoPath --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
+  mongo $mongoPath --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.find({'timestamp':{\$exists:false}}).count();"
 fi;
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'timestamp':{\$exists:false}});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'timestamp':{\$exists:false}});"
+  echo $mongoPath --eval "db.events.remove({'timestamp':{\$exists:false}});"
+  mongo $mongoPath --eval "db.events.remove({'timestamp':{\$exists:false}});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'timestamp':{\$exists:false}});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'timestamp':{\$exists:false}});"
@@ -95,8 +96,8 @@ else
 fi;
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'timestamp':''});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.events.remove({'timestamp':''});"
+  echo $mongoPath --eval "db.events.remove({'timestamp':''});"
+  mongo $mongoPath --eval "db.events.remove({'timestamp':''});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'timestamp':''});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.events.remove({'timestamp':''});"
@@ -126,16 +127,16 @@ mongo IdleTimeMongoScriptV2.js
 echo "Add the idleTime indexes" at $(timestamp)
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'sid': 1});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'sid': 1});"
+  echo $mongoPath --eval "db.idleTimes.ensureIndex({'sid': 1});"
+  mongo $mongoPath --eval "db.idleTimes.ensureIndex({'sid': 1});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'sid': 1});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'sid': 1});"
 fi;
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
-  echo $mongoPath $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'url': 1});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'url': 1});"
+  echo $mongoPath --eval "db.idleTimes.ensureIndex({'url': 1});"
+  mongo $mongoPath --eval "db.idleTimes.ensureIndex({'url': 1});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'url': 1});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'url': 1});"  
@@ -143,7 +144,7 @@ fi;
 
 if [ "$mongoUser" = "USERNAME" ] || [ "$mongoUser" = "" ];then 
   echo $mongoPath --eval "db.idleTimes.ensureIndex({'timestamp':1});"
-  mongo $mongoPath $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'timestamp':1});"
+  mongo $mongoPath --eval "db.idleTimes.ensureIndex({'timestamp':1});"
 else
   echo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'timestamp':1});"
   mongo $mongoPath -u "$mongoUser" -p "$mongoPass" --authenticationDatabase $mongoAuthenticateDB --eval "db.idleTimes.ensureIndex({'timestamp':1});"  

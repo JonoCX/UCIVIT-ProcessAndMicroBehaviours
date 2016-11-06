@@ -9,4 +9,4 @@ mongoAuthenticateDB="admin"
 mongoDB="ucivitdb"
 
 ##web site to be analysed, determined by its "sd" value. 10002 is kupb, 10006 is CS
-websiteId="WEBSITEID";
+websiteId="10006";

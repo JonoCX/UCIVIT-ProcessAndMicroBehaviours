@@ -11,7 +11,7 @@ var mongoUser = "DBUSERNAME";
 var mongoPass = "DBPASSWORD";
 
 //web site to be analysed, determined by its "sd" value. 10002 is kupb, 10006 is CS
-var websiteId = "WEBSITEID";
+var websiteId = "10006";
 
 
 /** Connects to the database, authenticates the connection against the correspondent 
@@ -19,11 +19,16 @@ var websiteId = "WEBSITEID";
 function connectAndValidate() {
 	connect(mongoPath);
 
-	if (mongoUser !== "" || mongoUser !== "DBUSERNAME"){
+	if (mongoUser !== "" && mongoUser !== "DBUSERNAME"){
+		print("Authentication is required");
 		db = db.getSiblingDB(mongoAuthenticateDB);
 		db.auth(mongoUser,mongoPass);
 		db = db.getSiblingDB(mongoQueryDB);
 	}
+	else{
+		db = db.getSiblingDB(mongoQueryDB);
+	}
+	
 	return db;
 }
 

@@ -50,7 +50,7 @@ print("CountLazyUsers function finished at" + datestamp()
 
 function createLazyUsersList(){
 	//We first get ALL users from the Web application to be analysed.
-	print("START of retrieving ALL user list:" + datestamp());
+	print("START of retrieving ALL user list from "+ db.events.find().count() +" events at:" + datestamp());
 	var userList = db.events.distinct("sid",
 		{
 			"sd" : websiteId
@@ -59,6 +59,10 @@ function createLazyUsersList(){
 
 	var totalUserCount = userList.length;
 	print("END of retrieving " + totalUserCount + " users:" + datestamp());
+	
+	if (totalUserCount==0){
+		print("WARNING!!! No users found")
+	}
 	
 
 	
