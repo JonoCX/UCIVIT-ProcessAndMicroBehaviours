@@ -15,7 +15,7 @@ db.dropDatabase();
 
 ### Importing test data
 
-1. Download supplied anonymised data and uncompress it.
+1. Download [this anonymised data](http://www.cs.man.ac.uk/~apaolaza/ucivit/ucivit_testdata.zip) and uncompress it.
 1. Import it into your MongoDB installation, running the following command from the same folder.
 
    ```script
@@ -191,6 +191,8 @@ NOTE: if the following error occurs: "The installed version of lxml is too old t
 ```script
 sudo apt-get build-dep python-lxml
 ```
+
+The script to extract the behaviours can be run with this command:
 
 ```script
 sh ExtractBehaviours.sh > ExtractBehaviours.log
