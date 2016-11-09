@@ -15,8 +15,9 @@ db.dropDatabase();
 
 ### Importing test data
 
-1. Download [this anonymised data](http://www.cs.man.ac.uk/~apaolaza/ucivit/ucivit_testdata.zip) and uncompress it.
-1. Import it into your MongoDB installation, running the following command from the same folder.
+1. If you are using a virtual machine, please make sure you allocate at least 40 GB to download, extract and restore the provided test data
+1. Download [this anonymised data](http://www.cs.man.ac.uk/~apaolaza/ucivit/ucivit_exampledataset.zip) and uncompress it.
+1. Look for the *ucivitdb_testdata* folder, and import it into your MongoDB installation running the following command. *mongorestore* is a utility from mongoDB ([mongorestore information page](https://docs.mongodb.com/manual/reference/program/mongorestore/)) so it can be run from the command line in the same way as the *mongo* command.
 
    ```script
    mongorestore /ucivitdb_testdata/
