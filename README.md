@@ -20,7 +20,7 @@ db.dropDatabase();
 1. Look for the *ucivitdb_testdata* folder, and import it into your MongoDB installation running the following command. *mongorestore* is a utility from mongoDB (for more information you can check the [mongorestore information page](https://docs.mongodb.com/manual/reference/program/mongorestore/)) so it can be run from the command line in the same way as the *mongo* command.
 
    ```script
-   mongorestore /ucivitdb_testdata/
+   mongorestore ucivit_testdata
    ```
 
 1. Once it has finished, run the following script to see the imported collections:
