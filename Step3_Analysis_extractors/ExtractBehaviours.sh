@@ -861,17 +861,9 @@ do
 	##sed to format the output files. the \ is used as scape character.
 	#sed -i '/pattern to match/d' ./infile
 	#sed -i '/MongoDB shell version: 2.4.10/d' $i
-	sed -i '/MongoDB shell version: .*/d' $i
-	sed -i '/connecting to: localhost\/testdb/d' $i
-   sed -i '/connecting to: localhost\/test/d' $i
-	sed -i '/connecting to: 130.88.193.33\/testdb/d' $i
-	sed -i '/connecting to: 130.88.193.33\/testdb/d' $i
-	sed -i '/connecting to: localhost\/kupballtrainingdb/d' $i
-	sed -i '/connecting to: localhost\/alltrainingdb/d' $i
-	sed -i '/connecting to: localhost\/alltrainingdb/d' $i
-	sed -i '/connecting to: localhost\/.*/d' $i
-	sed -i '/connecting to: alltrainingdb/d' $i
-   sed -i '/connecting to: test/d' $i
+	sed -i '/MongoDB shell.*/d' $i
+   sed -i '/MongoDB server.*/d' $i
+	sed -i '/connecting to: .*/d' $i
 	sed -i '/Error: 18 .*/d' $i
 
    sed -i 's/ : undefined/ : ""/g' $i
