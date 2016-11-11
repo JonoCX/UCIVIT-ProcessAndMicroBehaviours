@@ -99,6 +99,8 @@ lazyUsers
 userList
 ```
 
+NOTE: *lazyUsers* collection may not be created if no non-active users were found.
+
 Events have also been augmented with additional temporal information. For example, the amount of time the user has been interacting with the Web page up to that point is stored as *calculatedActiveTime*. To see the resulting augmented events you can use the following query. The first two lines of code are only necessary if you need to connect to the database again.
 
 ```script
