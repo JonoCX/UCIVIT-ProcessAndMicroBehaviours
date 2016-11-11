@@ -218,10 +218,3 @@ The design of this tool supported the following publications:
 ## Acknowledgements
 
 This work was supported by the Engineering and Physical Sciences Research Council [EP/I028099/1].
-
-
-## TODOs for section
-
-1. Add mock data
-1. Test that everything works
-1. I need to add examples of what collections are created in Step 2
